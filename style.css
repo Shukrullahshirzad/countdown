@@ -42,8 +42,12 @@
   font-size: 2rem;
   cursor: pointer;
  }
- .start-btn .fa-pause{
-   display: none;
+ 
+ .show{
+   display: block;
+ }
+ .hide{
+   display:none;
  }
  .left{
    width: 55%;
