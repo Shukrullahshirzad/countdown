@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Timer</title>
   <!-- font awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,13 +15,16 @@
       <i class="fa-solid fa-play"></i>
       <i class="fa-solid fa-pause"></i>
     </div>
-    <div class="title">
-      <h3>Timer</h3>
-    </div>
-    <div class="time">
-      <input type="number" placeholder="HH">
-      <input type="number" placeholder="Min">
-      <input type="number" placeholder="Sec">
+    <div class="left">
+      <button id="reset">Reset</button>
+      <div class="title">
+        <input type="text" placeholder="Timer1">
+      </div>
+      <div class="time">
+        <input type="tel" placeholder="HH">
+        <input type="tel" placeholder="Min">
+        <input type="tel" placeholder="Sec">
+      </div>
     </div>
   </div>
   <script src="app.js"></script>

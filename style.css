@@ -1,0 +1,98 @@
+:root{
+  /* colors  */
+  --main-bg: #ADB5BD;
+  --timer-bg: #282828;
+  --play-pause-bg: #cccccc;
+  --input-bg: #333333;
+
+}
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+ body{
+   min-height: 100vh;
+   background: var(--main-bg);
+   display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .timer{
+  background-color: var(--timer-bg);
+  display: flex;
+  position: relative;
+  width: 350px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+ }
+ .start-btn{
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .start-btn .fa-solid{
+  color: var(--play-pause-bg);
+  font-size: 2rem;
+  cursor: pointer;
+ }
+ .start-btn .fa-pause{
+   display: none;
+ }
+ .left{
+   width: 55%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   position: relative;
+   
+ }
+ #reset{
+  color: #999;
+  font-weight: bold;
+  text-decoration: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 0.7em;
+  background-color: transparent;
+  border: none;
+ }
+ input[type=text]{
+  width: 158px;
+  padding: 5px 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  height: 2em;
+  border: none;
+  padding: 0.2em 0.4em;
+  margin: 0.5em 3rem 0.5rem 0;
+  border-radius: 4px;
+  text-align: center;
+  background-color: var(--input-bg);
+  color: var(--play-pause-bg);
+ }
+ input[type=tel]{
+  width: 50px;
+  padding: 5px 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  height: 2em;
+  border: none;
+  padding: 0.2em 0.4em;
+  margin-bottom: 1em;
+  border-radius: 4px;
+  text-align: center;
+  background-color: var(--input-bg);
+  color: var(--play-pause-bg);
+ }
+ ::placeholder{
+   font-size: 0.8rem;
+ }
