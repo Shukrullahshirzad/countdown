@@ -36,6 +36,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
  }
  .start-btn .fa-solid{
   color: var(--play-pause-bg);
@@ -99,4 +100,29 @@
  }
  ::placeholder{
    font-size: 0.8rem;
+ }
+.start-btn .counter{
+  z-index: 99;
+}
+ .start-btn svg{
+   height: 120px;
+   width: 120px;
+   position: relative;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%) rotate(-90deg);
+   position: absolute;
+ }
+ .start-btn svg circle{
+   fill: transparent;
+   stroke:#007eff ;
+   stroke-width: 3;
+   stroke-linecap: round;
+   stroke-dasharray: 500;
+   stroke-dashoffset: 500;
+ }
+ @keyframes animate{
+   100%{
+     stroke-dashoffset: 0;
+   }
  }
