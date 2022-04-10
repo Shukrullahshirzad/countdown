@@ -7,24 +7,39 @@ const timeInput = document.querySelector('.time-input');
 let hourInput = document.querySelector('.hour-in');
 let minsInput = document.querySelector('.mins-in');
 let secsInput = document.querySelector('.secs-in');
-console.log(hourInput.value*3600, +minsInput.value*60, +secsInput.value);
 // total time
 let totalTime = (+hourInput.value)*3600 + (+minsInput.value) * 60 + (+secsInput.value);
-console.log(totalTime)
 // time in hour, mins and secs
-let hoursDisplay = totalTime / 3600;
-console.log(hoursDisplay)
-let minutesDisplay = (totalTime % 3600)/60;
-console.log(minutesDisplay)
-let secondsDisplay = minutesDisplay % 60; 
-console.log(secondsDisplay)
-let hourMins = document.querySelector('.hour-mins');
+let hoursDisplay = Math.floor(totalTime / 3600);
+let minutesDisplay = Math.floor((totalTime % 3600)/60);
+let secondsDisplay = Math.floor((totalTime % 3600)%60) %60 ; 
+
+let hour = document.querySelector('.hour');
+let mins =  document.querySelector('.mins');
 let secs = document.querySelector('.secs');
-hourMins.textContent = totalTime/hoursDisplay + ":" ;
 
-secs.textContent = secsInput.value;
+// display time 
+if(hoursDisplay < 10){
+  hour.textContent = "0"+ hoursDisplay + ":" ;
+}
+else{
+  hour.textContent = hoursDisplay + ":" ;
+}
+if(minutesDisplay< 10){
+  mins.textContent = "0"+ minutesDisplay;
+}
+else{
+  mins.textContent = minutesDisplay;
+}
+if(secondsDisplay< 10){
+  secs.textContent = "0"+ secondsDisplay;
+}
+else{
+  secs.textContent = secondsDisplay;
+}
 
-function reduceTime(time){
+setTimeout(updateTime(totalTime), 1000)
+function updateTime(time){
   time -= 1
 }
 start.addEventListener("click",(e)=>{
