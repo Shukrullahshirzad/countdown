@@ -14,8 +14,10 @@ console.log(totalTime)
 // time in hour, mins and secs
 let hoursDisplay = totalTime / 3600;
 console.log(hoursDisplay)
-let minutesDisplay = hoursDisplay / 60;
-let secondsDisplay = minutesDisplay / 60; 
+let minutesDisplay = (totalTime % 3600)/60;
+console.log(minutesDisplay)
+let secondsDisplay = minutesDisplay % 60; 
+console.log(secondsDisplay)
 let hourMins = document.querySelector('.hour-mins');
 let secs = document.querySelector('.secs');
 hourMins.textContent = totalTime/hoursDisplay + ":" ;
