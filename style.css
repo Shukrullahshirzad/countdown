@@ -30,6 +30,21 @@
   border-radius: 10px;
 
  }
+ #circle{
+   fill: transparent;
+   stroke: green;
+   stroke-width: 3px;
+   stroke-dasharray: 312;
+   stroke-dashoffset: 312;
+   animation: anime ease-out forwards;
+   animation-duration: 5s;
+
+ }
+ @keyframes anime {
+   to{
+     stroke-dashoffset: 0;
+   }
+ }
  .start-btn{
   width: 45%;
   height: 100%;
@@ -100,6 +115,22 @@
  }
  ::placeholder{
    font-size: 0.8rem;
+ }
+ .time-separator{
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--play-pause-bg);
+  padding-left: 2px;
+ }
+ .time-display .hour-mins{
+   color: var(--play-pause-bg);
+   font-size: 3rem;
+ }
+ .time-display .secs{
+   color: var(--main-bg);
+   font-size: 1.5rem;
+   vertical-align:top;
+   line-height: 1.9;
  }
 .start-btn .counter{
   z-index: 99;

@@ -25,10 +25,14 @@
       <div class="title">
         <input type="text" placeholder="Timer1">
       </div>
-      <div class="time">
-        <input type="tel" placeholder="HH">
-        <input type="tel" placeholder="Min">
-        <input type="tel" placeholder="Sec">
+      <div class="time-display hide">
+        <span class="hour-mins">00:00</span>
+        <span class="secs">00</span>
+      </div>
+      <div class="time-input">
+        <input class="hour-in" type="tel" placeholder="HH"><span class="time-separator">:</span>
+        <input class="mins-in" type="tel" placeholder="Min"><span class="time-separator">:</span>
+        <input class="secs-in" type="tel" placeholder="Sec">
       </div>
     </div>
   </div>
