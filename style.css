@@ -34,8 +34,8 @@
    fill: transparent;
    stroke: green;
    stroke-width: 3px;
-   stroke-dasharray: 312;
-   stroke-dashoffset: 312;
+   stroke-dasharray: 315;
+   stroke-dashoffset: 315;
    animation: anime ease-out forwards;
    animation-duration: 5s;
 
@@ -144,16 +144,4 @@
    transform: translate(-50%, -50%) rotate(-90deg);
    position: absolute;
  }
- .start-btn svg circle{
-   fill: transparent;
-   stroke:#007eff ;
-   stroke-width: 3;
-   stroke-linecap: round;
-   stroke-dasharray: 500;
-   stroke-dashoffset: 500;
- }
- @keyframes animate{
-   100%{
-     stroke-dashoffset: 0;
-   }
- }
+ 
